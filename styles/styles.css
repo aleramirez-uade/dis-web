@@ -4,10 +4,10 @@
 /* Variables de color */
 :root {
     --color-oscuro: #555B6E;
-    --color-intermedio: #89B0AE;
+    --color-intermedio: #48a09c;
     --color-claro: #BEE3DB;
     --color-fondo: #FAF9F9;
-    --color-acento: #FFD6BA;
+    --color-acento: #f8c39f;
     --color-negro: #000000;
     --color-link: #023e8a;
 }
