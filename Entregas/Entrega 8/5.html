@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <script>
+        var numeroSecreto = Math.floor(Math.random() * 11);
+        var adivinado = false;
+
+        while (!adivinado) {
+            var intento = parseInt(prompt("Adivina el número (entre 0 y 10):"));
+            if (intento < numeroSecreto) {
+                alert("Tu número es menor que el número a adivinar.");
+            } else if (intento > numeroSecreto) {
+                alert("Tu número es mayor que el número a adivinar.");
+            } else {
+                alert("¡Correcto! Has adivinado el número.");
+                adivinado = true;
+            }
+        }
+    </script>
+</body>
+</html>

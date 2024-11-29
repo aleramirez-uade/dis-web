@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementación de Plugins</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <style>
+        .container { max-width: 800px; margin: auto; }
+        header { padding: 50px; text-align: center; background: #333; color: white; }
+        .carousel img, .slider-content img { width: 200px; height: auto; }
+        .whatsapp-btn { display: block; padding: 10px 20px; background: #25D366; color: white; text-align: center; font-weight: bold; margin: 20px 0; text-decoration: none; }
+        .parallax-section { height: 400px; background-size: cover; position: relative; }
+        .gallery img { width: 100px; height: 100px; margin: 10px; cursor: pointer; }
+        .slider-content { padding: 20px; background: #f7f7f7; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <header>
+        <h1>Implementación de Plugins jQuery</h1>
+    </header>
+
+    <!-- Carrusel de Imágenes -->
+    <section class="carousel">
+        <div><img src="squire.PNG" alt="Squire"></div>
+        <div><img src="knight.PNG" alt="Knight"></div>
+        <div><img src="archer.PNG" alt="Archer"></div>
+    </section>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/1234567890?text=Hola,%20me%20gustaría%20contactar%20contigo!" class="whatsapp-btn" target="_blank">Contáctanos en WhatsApp</a>
+    
+    <!-- Carrusel -->
+    <section class="slider-content owl-carousel owl-theme">
+        <div><img src="chemist.PNG" alt="Chemist"></div>
+        <div><img src="priest.PNG" alt="Priest"></div>
+        <div><img src="wizard.PNG" alt="Wizard"></div>
+    </section>
+
+    <!-- Parallax -->
+    <section class="parallax-section" data-parallax="scroll" data-image-src="ffBackground.jpg">
+    </section>
+
+    <!-- Lightbox -->
+    <section class="gallery">
+        <a href="chemist.PNG" class="popup-link"><img src="chemist.PNG" alt="Chemist mini"></a>
+        <a href="wizard.PNG" class="popup-link"><img src="wizard.PNG" alt="Priest mini"></a>
+        <a href="priest.PNG" class="popup-link"><img src="priest.PNG" alt="Wizard mini"></a>
+        <a href="squire.PNG" class="popup-link"><img src="squire.PNG" alt="Squire mini"></a>
+        <a href="knight.PNG" class="popup-link"><img src="knight.PNG" alt="Knight mini"></a>
+        <a href="archer.PNG" class="popup-link"><img src="archer.PNG" alt="Archer mini"></a>
+    </section>
+</div>
+
+<!-- Scripts de inicialización de plugins -->
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Magnific Popup JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<!-- Slick Carousel JS -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- Parallax.js -->
+<script src="https://cdn.jsdelivr.net/npm/jquery-parallax.js@1.5.0/parallax.min.js"></script>
+
+<script>
+    $(function() {
+        $('.carousel').slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+
+        $('.slider-content').owlCarousel({
+            items: 3,
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 3000
+        });
+
+        $('.parallax-section').parallax({
+            imageSrc: 'ffBackground.jpg'
+        });
+
+        $('.popup-link').magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

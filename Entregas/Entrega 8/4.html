@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <script>
+        var numeros = [];
+        for (var i = 0; i < 5; i++) {
+            numeros.push(parseFloat(prompt("Ingrese un número:")));
+        }
+
+        var mayor = Math.max(...numeros);
+        var menor = Math.min(...numeros);
+
+        document.write("<ul>");
+        document.write("<li>El número mayor es " + mayor + "</li>");
+        document.write("<li>El número menor es " + menor + "</li>");
+        document.write("</ul>");
+    </script>
+</body>
+</html>

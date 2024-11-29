@@ -1,0 +1,202 @@
+/* Importación de fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+/* Variables de color */
+:root {
+    --color-oscuro: #555B6E;
+    --color-intermedio: #89B0AE;
+    --color-claro: #BEE3DB;
+    --color-fondo: #FAF9F9;
+    --color-acento: #FFD6BA;
+    --color-negro: #000000;
+}
+
+/* Configuración general */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--color-oscuro);
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 5%;
+    line-height: 1.6;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Baskerville', serif;
+    color: var(--color-oscuro);
+}
+
+
+a {
+    color: var(--color-intermedio);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-acento);
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--color-intermedio);
+    color: var(--color-fondo);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-claro);
+    color: var(--color-negro);
+}
+
+.btn-secondary {
+    background-color: var(--color-acento);
+    color: var(--color-negro);
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-oscuro);
+    color: var(--color-fondo);
+}
+
+/* Tarjetas */
+.card {
+    border: 1px solid var(--color-claro);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-family: 'Libre Baskerville', serif;
+    color: var(--color-oscuro);
+}
+
+.card-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--color-negro);
+}
+
+
+header {
+    background-color: var(--color-intermedio);
+    color: var(--color-fondo);
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: 1.5rem;
+    }
+}
+
+.portfolio-section {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--color-fondo);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background-color: var(--color-fondo);
+}
+.dropdown-menu {
+    background-color: var(--color-fondo);
+    border: 2px solid var(--color-acento);
+}
+
+.dropdown-item {
+    color: var(--color-negro);
+}
+
+.dropdown-item:hover {
+    background-color: var(--color-claro);
+    color: var(--color-oscuro);
+}
+.navbar {
+    background-color: var(--color-acento); 
+    color: var(--color-negro);
+    height: 10%;
+}
+
+.navbar h1{
+    font-size: 2rem;
+}
+
+.navbar-brand, .nav-link {
+    color: var(--color-negro);
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: var(--color-oscuro);
+}
+.navbar-toggler {
+    background-color: var(--color-acento); 
+    border: none; 
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0,0,0,0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+@media (max-width: 990px) {
+    .navbar-collapse {
+        background-color: var(--color-fondo);
+        border: 1px solid var(--color-oscuro);
+    }
+    .nav-link {
+        color: var(--color-negro);
+    }
+    
+    .nav-link:hover {
+        background-color: var(--color-claro);
+        color: var(--color-oscuro);
+    }
+}
+
+.lead {
+    max-width: 70ch;
+    text-align: center;
+}
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+.dropdown-menu {
+    transition: all 0.5s ease-in-out;
+}
+
+div img {
+    max-height: auto;
+    max-width: 50%;
+}

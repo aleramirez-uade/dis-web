@@ -1,0 +1,36 @@
+h1{
+    color: cornflowerblue;
+}
+h2{
+    color: goldenrod;
+}
+#red{
+    color: red;
+}
+.maroon{
+    color: maroon;
+}
+#green{
+    color: greenyellow;
+}
+body p span{
+    color: green;
+}
+#tan{
+    color: rosybrown;
+}
+.brown{
+    color: saddlebrown;
+}
+#lilac{
+    color: mediumpurple;
+}
+.purple{
+    color: rebeccapurple;
+}
+#magenta{
+    color: magenta;
+}
+.darkpink{
+    color: rgb(197, 1, 181);
+}
